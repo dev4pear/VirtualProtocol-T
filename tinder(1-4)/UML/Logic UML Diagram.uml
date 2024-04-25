@@ -1,0 +1,28 @@
+@startuml
+
+class TinderService {
+    + getRecommendations(userId: integer): Profile[]
+}
+
+class Profile {
+    + id: integer
+    + name: string
+    + gender: string
+    + location: string
+    + university: string
+    + interests: string
+}
+
+class SwipeController {
+    - currentProfileIndex: integer
+    - profiles: Profile[]
+    + fetchRecommendations(): void
+    + handleSwipeLeft(): void
+    + handleSwipeRight(): void
+    + handleKeyDown(event: KeyboardEvent): void
+}
+
+TinderService --> Profile : fetch
+SwipeController --> TinderService : fetchRecommendations
+
+@enduml

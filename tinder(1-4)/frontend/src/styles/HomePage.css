@@ -1,0 +1,18 @@
+.card > div {
+  width: 300px;
+  margin: auto;
+  border: 1px solid black;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  cursor: default;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+}
+
+.buttons > button:first-child {
+    margin-right: 50px;
+}

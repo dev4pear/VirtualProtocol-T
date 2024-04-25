@@ -1,0 +1,21 @@
+@startuml
+
+class User {
+    + id: integer
+    + email: string
+    + password: string
+}
+
+class Profile {
+    + id: integer
+    + userId: integer
+    + name: string
+    + gender: string
+    + location: string
+    + university: string
+    + interest: string
+}
+
+User "1" --> "1..*" Profile : has
+
+@enduml
